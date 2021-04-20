@@ -1,0 +1,24 @@
+ocp-svc          IN      A        172.16.3.135
+
+; Bootstrap Node
+ocp-bootstrap.ocp       IN      A      172.16.3.41
+
+; Master/Control Plane Nodes
+ocp-cp-1.ocp         IN      A      172.16.3.42
+ocp-cp-2.ocp         IN      A      172.16.3.43
+ocp-cp-3.ocp         IN      A      172.16.3.47
+
+; Worker Nodes
+ocp-w-1.ocp     IN      A     172.16.3.56
+ocp-w-2.ocp       IN      A      172.16.3.57
+ocp-w-3.ocp	IN	A	172.16.3.94
+
+; OpenShift Internal - Load balancer
+api.ocp        IN    A    172.16.3.135
+api-int.ocp    IN    A    172.16.3.135
+*.apps.ocp     IN    A    172.16.3.135
+
+; ETCD Cluster
+etcd-0.ocp    IN    A     172.16.3.42
+etcd-1.ocp    IN    A     172.16.3.43
+etcd-2.ocp    IN    A     172.16.3.47
